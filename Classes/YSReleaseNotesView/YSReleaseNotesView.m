@@ -49,23 +49,21 @@ NSString *ys_CFBundleShortVersionString()
     __weak TWSReleaseNotesDownloadOperation *weakOperation = operation;
     [operation setCompletionBlock:^{
         TWSReleaseNotesDownloadOperation *strongOperation = weakOperation;
-        if (completion) {
-            if (strongOperation.error) {
-                NSError *error = strongOperation.error;
-                
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    // Perform completion block with error
-                    DDLogError(@"%s; %@", __func__, error);
-                    if (completion) completion(error);
-                }];
-            } else {
-                // Get release note text
-                NSString *releaseNotesText = strongOperation.releaseNotesText;
-                
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    [self showWithReleaseNote:releaseNotesText completion:completion];
-                }];
-            }
+        if (strongOperation.error) {
+            NSError *error = strongOperation.error;
+            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                // Perform completion block with error
+                DDLogError(@"%s; %@", __func__, error);
+                if (completion) completion(error);
+            }];
+        } else {
+            // Get release note text
+            NSString *releaseNotesText = strongOperation.releaseNotesText;
+            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [self showWithReleaseNote:releaseNotesText completion:completion];
+            }];
         }
     }];
     
