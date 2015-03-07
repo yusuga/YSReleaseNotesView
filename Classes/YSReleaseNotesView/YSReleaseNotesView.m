@@ -41,7 +41,6 @@ NSString *ys_CFBundleShortVersionString()
 + (void)showWithAppIdentifier:(NSString*)appIdentifier
                    completion:(YSReleaseNotesViewCompletion)completion
 {
-    NSParameterAssert(completion);
     // Setup operation queue
     NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
     operationQueue.maxConcurrentOperationCount = 1;
@@ -56,7 +55,8 @@ NSString *ys_CFBundleShortVersionString()
                 
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     // Perform completion block with error
-                    completion(error);
+                    DDLogError(@"%s; %@", __func__, error);
+                    if (completion) completion(error);
                 }];
             } else {
                 // Get release note text
@@ -77,7 +77,6 @@ NSString *ys_CFBundleShortVersionString()
 + (void)showWithReleaseNote:(NSString*)releaseNote
                  completion:(YSReleaseNotesViewCompletion)completion
 {
-    NSParameterAssert(completion);
     YSReleaseNotesView *releaseNotesView = [[YSReleaseNotesView alloc] initWithReleaseNote:releaseNote];
     
     KLCPopup *popup = [KLCPopup popupWithContentView:releaseNotesView
@@ -89,7 +88,7 @@ NSString *ys_CFBundleShortVersionString()
     releaseNotesView.popup = popup;
     
     popup.didFinishDismissingCompletion = ^{
-        completion(nil);
+        if (completion) completion(nil);
     };
     
     [popup show];

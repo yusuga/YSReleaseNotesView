@@ -10,6 +10,17 @@
 
 typedef void(^YSReleaseNotesViewCompletion)(NSError *error);
 
+/**
+ Example usage
+ 
+ if (![YSReleaseNotesView isAppOnFirstLaunch] && [YSReleaseNotesView isAppVersionUpdated]) {
+     [YSReleaseNotesView showWithAppIdentifier:kAppIdentifier completion:^(NSError *error) {
+         NSLog(@"complete, error = %@", error);
+     }];
+ }
+ 
+ */
+
 @interface YSReleaseNotesView : UIView
 
 + (void)showWithAppIdentifier:(NSString*)appIdentifier
