@@ -21,18 +21,9 @@ PODS:
     - NBULog
 
 DEPENDENCIES:
-  - KLCPopup (from `https://github.com/jmascia/KLCPopup.git`)
+  - KLCPopup
   - TWSReleaseNotesView
   - YSCocoaLumberjackHelper
-
-EXTERNAL SOURCES:
-  KLCPopup:
-    :git: https://github.com/jmascia/KLCPopup.git
-
-CHECKOUT OPTIONS:
-  KLCPopup:
-    :commit: ba17c211cbfa62761fddb58201f9381126ca1fe7
-    :git: https://github.com/jmascia/KLCPopup.git
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 6027cd9a0665203a7df456c526e137f02cd547e1

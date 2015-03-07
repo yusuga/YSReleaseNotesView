@@ -1,4 +1,7 @@
+source 'https://github.com/yusuga/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '7.0'
 pod 'TWSReleaseNotesView'
-pod 'KLCPopup', :git => 'https://github.com/jmascia/KLCPopup.git'
+pod 'KLCPopup'
 pod 'YSCocoaLumberjackHelper'
