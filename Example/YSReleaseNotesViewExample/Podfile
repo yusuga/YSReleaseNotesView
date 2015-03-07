@@ -1,0 +1,4 @@
+platform :ios, '7.0'
+pod 'TWSReleaseNotesView'
+pod 'KLCPopup', :git => 'https://github.com/jmascia/KLCPopup.git'
+pod 'YSCocoaLumberjackHelper'
