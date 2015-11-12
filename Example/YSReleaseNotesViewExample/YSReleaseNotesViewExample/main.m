@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import <YSCocoaLumberjackHelper/YSCocoaLumberjackHelper.h>
+#import <LumberjackLauncher/LumberjackLauncher.h>
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        [YSCocoaLumberjackHelper launchLogger];
+        [LumberjackLauncher launchStandardLoggers];
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

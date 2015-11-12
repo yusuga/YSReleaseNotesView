@@ -1,37 +1,33 @@
 PODS:
-  - CocoaLumberjack (2.0.0-rc2):
-    - CocoaLumberjack/Default (= 2.0.0-rc2)
-    - CocoaLumberjack/Extensions (= 2.0.0-rc2)
-  - CocoaLumberjack/Core (2.0.0-rc2)
-  - CocoaLumberjack/Default (2.0.0-rc2):
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.0.0-rc2):
+  - CocoaLumberjack/Extensions (2.0.0):
     - CocoaLumberjack/Default
   - KLCPopup (1.1)
-  - LumberjackConsole (2.4.2):
-    - CocoaLumberjack (>= 2.0.0-beta4)
+  - LumberjackConsole (2.4.3):
+    - CocoaLumberjack (>= 2.0.0)
     - NBUCore (>= 2.0.3)
-  - NBUCore (2.0.4)
-  - NBULog (1.2.3):
-    - CocoaLumberjack (>= 2.0.0-beta4)
-  - TWSReleaseNotesView (1.2.0)
-  - YSCocoaLumberjackHelper (0.0.13):
-    - CocoaLumberjack (~> 2.0.0-rc)
+  - LumberjackLauncher (0.1.1):
+    - CocoaLumberjack (= 2.0.0)
     - LumberjackConsole
-    - NBULog
+  - NBUCore (2.0.4)
+  - TWSReleaseNotesView (1.2.1-yusuga.1)
 
 DEPENDENCIES:
   - KLCPopup
-  - TWSReleaseNotesView
-  - YSCocoaLumberjackHelper
+  - LumberjackLauncher
+  - TWSReleaseNotesView (= 1.2.1-yusuga.1)
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 6027cd9a0665203a7df456c526e137f02cd547e1
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
   KLCPopup: 4f6f34731088de77009bc920ec45b7fb241ac8bc
-  LumberjackConsole: cb05e10656efd74bfbaf9b9cbec87d0412d2a634
-  NBUCore: 978f24fdc8d79dc8141032bf0121053e3b25c95c
-  NBULog: 029ea974252f6d8e09de38985f67b9740098aa7f
-  TWSReleaseNotesView: 78ecc93fbf0d9a5f22182269cc0ab04509457271
-  YSCocoaLumberjackHelper: c91287453709941d5d107fc7f71c0a0e9e6bad99
+  LumberjackConsole: 81bad3312fea315b8a17e53926b014f032ec1f44
+  LumberjackLauncher: 7bfcc7b9533e0921f8254b82cd061a2c88108886
+  NBUCore: 89cbf3976cae47c358fd0ed8562ef66d79a8904a
+  TWSReleaseNotesView: 11faf542cf10a762ea4280f44bdd4060cb370ac0
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.39.0

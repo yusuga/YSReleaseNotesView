@@ -10,6 +10,7 @@
 #import <TWSReleaseNotesView/TWSReleaseNotesView.h>
 #import <TWSReleaseNotesView/TWSReleaseNotesDownloadOperation.h>
 #import <KLCPopup/KLCPopup.h>
+#import <LumberjackLauncher/LumberjackLauncher.h>
 
 static CGFloat const kMaxSize = 400.f;
 static CGFloat const kSpace = 15.f;
