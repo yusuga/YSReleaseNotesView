@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'YSReleaseNotesView'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
   s.summary = 'YSReleaseNotesView'
   s.homepage = 'https://github.com/yusuga/YSReleaseNotesView'
   s.license = 'MIT'
@@ -12,15 +12,8 @@ Pod::Spec.new do |s|
   s.resources    = 'Classes/YSReleaseNotesView/**/*.{xib,lproj}'
   s.requires_arc = true
   s.compiler_flags = '-fmodules'
-  
-  s.prefix_header_contents = "#import <CocoaLumberjack/CocoaLumberjack.h>
-#ifdef DEBUG
-    static const DDLogLevel ddLogLevel = DDLogLevelAll;
-#else
-    static const DDLogLevel ddLogLevel = DDLogLevelError;
-#endif"
-  
- s.dependency 'TWSReleaseNotesView'
+    
+ s.dependency 'TWSReleaseNotesView', '1.2.1-yusuga.1'
  s.dependency 'KLCPopup'
- s.dependency 'YSCocoaLumberjackHelper'
+ s.dependency 'LumberjackLauncher'
 end
